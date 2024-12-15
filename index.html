@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hindu Religious Places</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>Book my religious journey</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#" onclick="toggleAbout()">About</a></li>
+        <li><a href="#" onclick="toggleContact()">Contact</a></li>
+
+        <li><a href="#" onclick="toggleSignIn()" class="signin-btn">Sign In</a></li>
+    </ul>
+</nav>
+<div class="container">
+    <div id="about-section" style="display: none;">
+        <h2>About Us</h2>
+        <p>This website is dedicated to showcasing the beauty and history of Hindu religious places in India. Here, you can explore the spiritual significance, architecture, and stories behind some of the most revered temples and sites.</p>
+    </div>
+    <div id="contact-section" style="display: none;">
+        <h2>Contact Us</h2>
+        <p><strong>Name:</strong> Ajay Agnihotri</p>
+        <p><strong>Mobile:</strong> 9569438536</p>
+        <p><strong>Email:</strong> <a href="mailto:agni9555@gmail.com">agni9555@gmail.com</a></p>
+    </div>
+    <div id="signin-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-btn" onclick="toggleSignIn()">&times;</span>
+            <h2 id="modal-title">Sign In</h2>
+            
+            <!-- Sign In Form -->
+            <form id="signin-form" onsubmit="signIn(event)">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+    
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+    
+                <button type="submit">Sign In</button>
+            </form>
+    
+            <p>New User? <a href="#" onclick="toggleToSignUp()">Sign Up</a></p>
+        </div>
+    </div>
+    
+    <!-- Sign Up Form (Initially hidden) -->
+    <div id="signup-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-btn" onclick="toggleSignUp()">&times;</span>
+            <h2>Sign Up</h2>
+            
+            <!-- Sign Up Form -->
+            <form id="signup-form" onsubmit="signUp(event)">
+                <label for="new-email">Email:</label>
+                <input type="email" id="new-email" required>
+    
+                <label for="new-password">Password:</label>
+                <input type="password" id="new-password" required>
+    
+                <button type="submit">Sign Up</button>
+            </form>
+    
+            <p>Already a user? <a href="#" onclick="toggleToSignIn()">Sign In</a></p>
+        </div>
+    </div>
+    
+    
+    <div class="place-gallery">
+        <div class="place-item" onclick="window.location.href='place-info.html';">
+            <img src="kedarnath.jpg" alt="Kedarnath">
+            <div class="info">
+                <h3>Kedarnath Temple</h3>
+                <p>Kedarnath is a sacred Hindu temple dedicated to Lord Shiva, located in Uttarakhand at an altitude of 3,583 meters in the Himalayas. In Hindu tradition, it is believed that Lord Shiva manifested in the form of Jyotirlingam or the cosmic light. There are 12 such Jyotirlingas, and Kedarnath is the highest among them.</p>
+            </div>
+        </div>
+        <div class="place-item" onclick="window.location.href='place-info.html';">
+            <img src="badrinath.webp" alt="Badrinath">
+            <div class="info">
+                <h3>Badrinath Temple</h3>
+                <p>Badrinath is one of the holiest Hindu shrines, dedicated to Lord Vishnu, located in Uttarakhand, India, at an altitude of 3,133 meters in the Garhwal Himalayas.The Badrinath Temple also known as the Badrinarayan Temple, located in Uttarakhand's Badrinath town, is one of the Char Dhams (four important pilgrimages) in the state. There are four pilgrim-destinations namely Yamunotri, Gangotri, Kedarnath, and Badrinath, collectively known as Char Dham. These pilgrimage centres draw large number of pilgrims each year, thus becoming the most important hubs of religious travel in the whole of Northern India. 
+
+                    Badrinath is located at an elevation of around 3,100 m. Located in the Garhwal Himalayas, on the banks of the Alaknanda river, this sacred town lies between Nar and Narayana mountain ranges. </p>
+            </div>
+        </div>
+        <div class="place-item" onclick="window.location.href='place-info.html';">
+            <img src="bake_bihari.jpg" alt="Bake Bihari">
+            <div class="info">
+                <h3>Bake Bihari Temple</h3>
+                <p>Banke Bihari is a famous temple dedicated to Lord Krishna, located in Vrindavan, Uttar Pradesh. It is one of the most revered temples in India and attracts millions of devotees.Shri Bankey Bihari Mandir is a Hindu temple dedicated to Lord Krishna, in the holy city of Vrindavan in the Mathura district of Uttar Pradesh. It is situated near Shri RadhaVallabh Temple.This temple is among the 7 temples of Thakur of Vrindavan including Shri RadhaVallabh Ji, Shri Govind Dev Ji and four others. Bankey Bihari Ji was originally worshipped at Nidhivana.Bankey means “bent in three places” and Bihari means “supreme enjoyer.” The image of Lord Krishna stands in the Tribhanga posture. Haridas Swami originally worshipped this devotional image under the name of Kunj-Bihari (“Enjoyer of Lakes”).
+
+                    ‘Bānke’ means ‘bent’, and ‘Bihāri’ or ‘Vihāri’ means ‘enjoyer’. This is how Kṛṣṇa, who is bent in three places, got the name “Bānke Bihāri”.</p>
+            </div>
+        </div>
+        <div class="place-item" onclick="window.location.href='place-info.html';">
+            <img src="prem_mandir.jpg" alt="Prem Mandir">
+            <div class="info">
+                <h3>Prem Mandir</h3>
+                <p>Prem Mandir is a beautiful and modern temple located in Vrindavan, Uttar Pradesh. Dedicated to Lord Krishna and Radha, it is known for its stunning architecture, intricate carvings, and spiritual ambiance.
+                    Prem Mandir is a Hindu temple in Vrindavan, Mathura, India. It is maintained by Jagadguru Kripalu Parishat, an international non-profit, educational, spiritual, charitable trust.
+
+The complex is on a 54-acre site on the outskirts of Vrindavan, and is dedicated to Lord Radha Krishna and Sita Ram. The temple structure was established by the fifth Jagadguru, Kripalu Maharaj. Figures of Shri Krishna and his followers depicting important events surrounding the Lord’s existence cover the main temple.
+                </p>
+            </div>
+        </div>
+        <div class="place-item" onclick="window.location.href='place-info.html';">
+            <img src="akshar_dhaam.jpg" alt="Akshar Dhaam">
+            <div class="info">
+                <h3>Akshar Dhaam Temple</h3>
+                <p>Akshardham is a grand Hindu temple located in Delhi, India, dedicated to Bhagwan Swaminarayan. It was inaugurated in 2005 and is known for its stunning architecture, cultural exhibitions, and spiritual significance.
+                    Located in the heart of India i.e., New Delhi, Akshardham Temple is a marvel of architecture that unfolds the cultural legacy of thousands of years and is a tribute to Lord Swaminarayan (1781- 1830) who is the avatars, devas and great sages of Hinduism. The construction of the grand structure took almost 5 years and was inaugurated on 6 November, 2005. Today the imposing structure is standing on the banks of the Yamuna River and attracts millions of tourists and pilgrims across the globe.
+                </p>
+            </div>
+        </div>
+        <div class="place-item" onclick="window.location.href='place-info.html';">
+            <img src="mahakaelshwar.jpg" alt="Mahakaleshwar">
+            <div class="info">
+                <h3>Mahakaleshwar Temple</h3>
+                <p>Mahakaleshwar is a sacred temple dedicated to Lord Shiva, located in Ujjain, Madhya Pradesh. It is one of the twelve Jyotirlingas and holds immense religious significance for Hindus.
+                    Shri Mahakaleshwar of Ujjayini is known among the twelve celebrated Jyotirlingas in India. The glory of Mahakaleshwar temple has been vividly described in various Purans. Starting with Kalidasa, many sanskrit poets have eulogized this temple in emotive terms. Ujjain used to be the central point for calculation of Indian time and Mahakala was considered as the distinctive presiding deity of Ujjain.The presiding deity of time, Shiva, in all his splendor, reigns eternal in Ujjain.
+                </p>
+            </div>
+        </div>
+        <div class="place-item" onclick="window.location.href='place-info.html';">
+            <img src="kashi.jpg" alt="Kashi Vishwanath">
+            <div class="info">
+                <h3>Kashi Vishwanath Temple</h3>
+                <p>Kashi Vishwanath is one of the most revered temples in India, dedicated to Lord Shiva. Located in Varanasi, Uttar Pradesh, it is considered one of the twelve Jyotirlingas and holds immense spiritual significance for Hindus.
+                    Kashi Vishwanath Temple, temple located in Varanasi, Uttar Pradesh, India. It is among the most important Hindu temples in India and is one of the 12 temples where Shiva is believed to have appeared as a column of light.
+
+The Kashi Vishwanath Temple stands on the west bank of the Ganges River. It is dedicated to Shiva, who has been worshipped here for hundreds of years as Vishwanatha or Vishweshwara, “Lord of the Universe.”
+                </p>
+            </div>
+        </div>
+        <div class="place-item" onclick="window.location.href='place-info.html';">
+            <img src="vanaras_ghat.jpg" alt="Vanaras Ghat">
+            <div class="info">
+                <h3>Banaras Ghaat</h3>
+                <p>Banaras Ghats are a series of steps leading down to the River Ganges in Varanasi, Uttar Pradesh, one of the oldest and holiest cities in India. There are over 80 ghats in the city, each with its own significance and history.
+                    Banaras Ghat, or more commonly known as Varanasi Ghats, are a series of steps leading down to the River Ganges (Ganga) in the city of Varanasi, Uttar Pradesh. Varanasi is one of the oldest cities in the world and is considered the spiritual capital of India. The ghats are essential to the culture, history, and daily rituals of the city.
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="travel-options">
+        <h2>Plan Your Trip</h2>
+        <form id="trip-form">
+            <label for="from-city">From:</label>
+            <input type="text" id="from-city" placeholder="Enter your city" required>
+
+            <label for="to-city" style="margin-left: 10px;">To:</label>
+            <input type="text" id="to-city" placeholder="Enter destination" required>
+
+            <button type="button" onclick="planTrip()">Find Trip</button>
+        </form>
+
+        
+        <a href="https://www.redbus.in" target="_blank" class="ticket-link">Book Bus Tickets</a>
+        <a href="https://www.irctc.co.in" target="_blank" class="ticket-link">Book Train Tickets</a>
+    </div>
+</div>
+
+
+
+</body>
+</html>
